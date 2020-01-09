@@ -1,0 +1,16 @@
+{
+  "name": "platzi-store-backend",
+  "version": "1.0.0",
+  "description": "Platzi Store Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "Oscar Barajas <oscar@platzi.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
