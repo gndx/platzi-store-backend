@@ -1,0 +1,27 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+node_js:
+  - '12'
+git:
+  depth: 3
+script:
+  - yarn test
+notifications:
+  slack: falvarix:DDD0tJP2Bu43vxkdMAKH3V49
+  email:
+    recipients:
+      - elserhumano@gmail.com
+    on_success: always
+    on_failure: always
+deploy:
+  provide: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key: 0339aa09-2fb2-4134-a720-04e11f1dccd2
+  app: falvarix-store-backend
+  on:
+    repo: elserhumano/platzi-store-backend
+
