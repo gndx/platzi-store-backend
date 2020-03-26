@@ -1,0 +1,28 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+node_js:
+  - '12'
+git:
+  depth: 3
+script:
+  -yarn test
+notifications:
+  slack: jrojasespacio:AjuEdoA31ySqH30No9LXgK2w
+  email:
+    recipients:
+      - joel.a.rojas.v@gmail.com
+      - jrojas@cirrus-it.net
+    on_success: always
+    on_failure: always
+
+deploy:
+  provide: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key: 22f69724-993f-4b78-9464-14c5672e288c
+  app: platzi-store-backend-jrojas
+  on:
+    repo: joelrojas/platzi-store-backend
