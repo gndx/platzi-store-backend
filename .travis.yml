@@ -8,7 +8,7 @@ node_js:
 git:
   depth: 3
 script:
-  -yarn test
+  - yarn test
 notifications:
   slack: jrojasespacio:AjuEdoA31ySqH30No9LXgK2w
   email:
