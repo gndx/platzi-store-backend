@@ -1,0 +1,29 @@
+languaje: node_js
+cache: 
+   direcctories: 
+      - node_modules
+      - ~/.npm
+
+node_js:
+   -'12'
+git: 
+    depth: 3
+script: 
+   - yarn test
+notifications: 
+  slack: develop-mundo:tT8f98wiztWkpwypwjvlV9bT
+  email:
+    recipients: 
+       - juandnb@outlook.es
+       - juanmothy182@gmail.com
+    on_success: always
+    on_failure: always
+
+deploy:
+  provide: heroku
+  skip-cleanuo: true
+  keep-history: true
+  api_key: fd4772a4-986f-43a5-9cb3-8c39205d9c39 
+  app: platzi-store-backendjp
+  on:
+    repo: juandnb01/platzi-store-backend
