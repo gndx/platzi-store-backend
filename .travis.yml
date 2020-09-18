@@ -1,0 +1,27 @@
+languahe: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+
+node_js:
+  - '12'
+git:
+  depth: 3
+script:
+  - yarn test
+
+notificatioon:
+  email:
+    recipients:
+      - conedie@gmail.com
+    on_success: always
+    on_failure: always
+deploy:
+  provider: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key: 44be0c4d-60ba-4fb8-ae86-736aeafbdcac
+  app: platzi-store-backend1
+  on:
+    repo: diegbelg/platzi-store-backend
