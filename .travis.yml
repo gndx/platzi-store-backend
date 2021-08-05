@@ -1,0 +1,35 @@
+language: node_js
+
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+
+node_js:
+  - '12'
+
+git:
+  depth: 3
+
+script:
+  - yarn test
+
+notifications:
+  #slack: workspace:token
+  email:
+    recipients:
+      - jonapincay97@gmail.com
+      - jonapincay99@gmail.com
+    on_success: always
+    on_failure: always
+
+deploy:
+  provide: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key: 16ed3ae0-1e99-4f2f-88e3-b1c4e6f878f3 # desde heroku
+  app: flstudio-practica
+  on:
+    repo: JonathanPincay/platzi-store-backend
+
+
