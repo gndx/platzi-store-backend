@@ -1,0 +1,25 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+node_js:
+  - '12'
+git:
+  depth: 3
+script: 
+  - yarn test
+notifications:
+  email:
+    recipients:
+      - christiancleves05@gmail.com
+    on_success: always
+    on_failure: always
+deploy:
+  provider: heroku
+  skip_clean: true
+  keep_history: true
+  api_key: 43e599d2-9e89-45d4-b44a-e4ee4cc4a16d
+  app: platzi-store-backend-ch
+  on:
+    repo: Christianlopez4/platzi-store-backend
