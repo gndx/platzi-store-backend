@@ -18,7 +18,7 @@ notifications:
     recipients: 
       - leo63582@gmail.com
   on_succes: always
-  on:failure: always
+  on_failure: always
 
 deploy:
   provide: heroku
