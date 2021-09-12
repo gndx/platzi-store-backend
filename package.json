@@ -13,6 +13,9 @@
   "keywords": [],
   "author": "Leon Angelit",
   "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "bugs": {
     "url": "https://github.com/LeonAngelit/platzi-store-backend/issues"
   },
