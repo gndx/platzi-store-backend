@@ -1,0 +1,30 @@
+languaje: node_js
+cache:
+  directories:
+    -node_modules
+    - ~/.npm
+
+node_js: 
+  -'12'
+git:
+  depth: 3
+
+script:
+  - yarn test
+
+notifications:
+  slack: curso-webpack:OLpF7rBBcVhLIYqkGLUjg4xC
+  email:
+    recipients: 
+      - leo63582@gmail.com
+  on_succes: always
+  on:failure: always
+
+deploy:
+  provide: heroku
+  skip_cleanup: true
+  keep_history: true
+  api_key: dcddec65-907c-48d2-9e06-ba10229dd387
+  app: leonangelit-platzi-store
+  on:
+    repo: LeonAngelit/platzi-store-backend
