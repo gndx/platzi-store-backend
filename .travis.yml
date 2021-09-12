@@ -26,5 +26,5 @@ deploy:
   keep_history: true
   api_key: dcddec65-907c-48d2-9e06-ba10229dd387
   app: leonangelit-platzi-store
-on:
-  repo: LeonAngelit/platzi-store-backend
+  on:
+    repo: LeonAngelit/platzi-store-backend
