@@ -11,13 +11,14 @@ script:
   - yarn test
 notifications:
   slack: zvelez:Wl8pygh5ZKstLllFcWwLK3uQ
-  email: 
+  email:
     recipients:
       - zvelez@gmail.com
     on_success: always
     on_faliure: always
-deploy: 
+deploy:
   provider: heroku
+  strategy: git
   skip-cleanup: true
   keep-history: true
   api-key: 2cfe2d09-73bc-4692-b004-f1c7a678002e
